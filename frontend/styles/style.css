@@ -7,6 +7,55 @@
 
 }
 
-header div{
-    background-image: ;
+header {
+  background-image: url(../../public/images/Safesteps-logo.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 250px; /* or min-height */
+  background-position: center;
+  text-align: center;
+  color: var(--light-background);
+}  
+
+h1,h2 {
+    font-family: "Alice",sans-serif,Helvetica;
+}
+
+body{
+    background-color: var(--light-background);
+    font-family: sans-serif,Arial,Helvetica;
+}
+
+section {
+    padding: 20px;
+    margin: 10px;
+    border-radius: 0 2rem 2rem 2rem;
+    border-left: solid 5px var(--main-color);
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(1,1,1,0.1);
+    transition: transform 0.2s ease;
+}
+
+section:hover {
+    transform: translateY(10px)
+}
+
+section li {
+    list-style-type: none;
+
+}
+
+footer {
+    text-align: center;
+    padding: 5px;
+    background-color: var(--secondary-color);
+    color: var(--light-background);
+}
+
+#brand{
+    color: var(--main-color);
+}
+
+#safesteps-brand {
+    color: var(--accent-color);
 }
