@@ -8,13 +8,10 @@
 }
 
 header {
-  background-image: url(../../public/images/Safesteps-logo.png);
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 250px; /* or min-height */
-  background-position: center;
-  text-align: center;
-  color: var(--light-background);
+
+    padding: 2rem;
+    text-align: center;
+    color: var(--text-color);
 }  
 
 h1,h2 {
@@ -29,7 +26,6 @@ body{
 section {
     padding: 20px;
     margin: 10px;
-    border-radius: 0 2rem 2rem 2rem;
     border-left: solid 5px var(--main-color);
     text-align: center;
     box-shadow: 0 4px 12px rgba(1,1,1,0.1);
@@ -57,5 +53,68 @@ footer {
 }
 
 #safesteps-brand {
+    color: var(--accent-color);
+}
+
+.hero{
+    border-radius: 2rem 2rem 2rem 0;
+}
+
+.problem-snap{
+    border-radius: 0 2rem 2rem 0;
+}
+
+.why-it-matters{
+    border-radius: 0 2rem 2rem o;
+}
+
+.nav-cards{
+    border-radius: 0 2rem 2rem 2rem;
+}
+
+#brand-name{
+    font-size: 5rem;
+    color: var(--main-color);
+}
+
+#sec-brand-name{
+    font-size: 5rem;
+    color: var(--secondary-color);
+}
+
+.nav-cards nav ul li{
+    list-style: none;
+    padding: 5px;
+    
+}
+
+.nav-cards nav ul li a{
+    padding: 5px;
+}
+
+#survey-link{
+    color: var(--main-color);
+}
+
+#solutions{
+    color: var(--secondary-color);
+}
+
+#involve{
+    color: var(--accent-color);
+}
+
+#see-here{
+    color: var(--accent-color);
+}
+
+button{
+    padding: 8px;
+    border: none;
+    border-radius: 4px;
+    background-color: var(--main-color);
+}
+
+#button-link{
     color: var(--accent-color);
 }
