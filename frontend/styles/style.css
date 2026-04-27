@@ -118,3 +118,27 @@ button{
 #button-link{
     color: var(--accent-color);
 }
+
+
+header nav ul li a {
+    text-decoration: none;
+    color: var(--main-color);
+    font-size: 1.2em;
+    padding: 5px;
+}
+
+header nav ul {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+header ul {
+    list-style: none;
+    padding: 0;
+
+}.hero ul {
+    list-style: none;
+    padding: 0;
+
+}
