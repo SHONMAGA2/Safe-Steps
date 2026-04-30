@@ -6,12 +6,28 @@
     --text-color: #1E293B;
 }
 
+header {
+
+    padding: 2rem;
+    text-align: center;
+    color: var(--text-color);
+}  
+
+h1,h2 {
+    font-family: "Alice",sans-serif,Helvetica;
+}
+
+body{
+    background-color: var(--light-background);
+    font-family: sans-serif,Arial,Helvetica;
+}
+
 #branding {
     color: var(--secondary-color);
 }
 
 #branding2 {
-    color: var(--secondary-color);
+    color: var(--main-color);
 }
 
 .socials {
@@ -53,4 +69,76 @@ footer {
 
 #survey-link{
     color: var(--main-color);
+}
+
+.content5 ul li{
+    color: var(--main-color);
+    list-style: none;
+    
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: var(--main-color);
+    font-size: 1.2em;
+    padding: 5px;
+}
+
+header nav ul li a:hover{
+    color: #e1306c;
+}
+
+header nav ul {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+
+header ul {
+    list-style: none;
+    padding: 0;
+}
+
+.content-groups{
+    margin-left: 2rem;
+    padding: 1rem;
+}
+
+article{
+    padding: 20px;
+    margin: 10px;
+    border-left: solid 5px var(--main-color);
+    box-shadow: 0 4px 12px rgba(1,1,1,0.1);
+    transition: transform 0.2s ease;
+    text-align: center;
+}
+
+.content1{
+    padding: 1rem;
+    margin-right: 1rem;
+}
+
+article:hover {
+    transform: translateY(10px)
+}
+
+.content1{
+    border-radius: 2rem 2rem 2rem 0;
+}
+
+.content2{
+    border-radius: 0 2rem 2rem 0;
+}
+
+.content3{
+    border-radius: 0 2rem 2rem 0;
+}
+
+.content4{
+    border-radius: 0 2rem 2rem 0;
+}
+
+.content5{
+    border-radius: 0 2rem 2rem 2rem;
 }

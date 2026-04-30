@@ -65,7 +65,7 @@ footer {
 }
 
 .why-it-matters{
-    border-radius: 0 2rem 2rem o;
+    border-radius: 0 2rem 2rem 0;
 }
 
 .nav-cards{
@@ -125,7 +125,6 @@ header nav ul li a {
     color: var(--main-color);
     font-size: 1.2em;
     padding: 5px;
-    transition: 0.3s ease;
 }
 
 header nav ul li a:hover{
