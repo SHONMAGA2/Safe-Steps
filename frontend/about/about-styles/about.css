@@ -50,3 +50,7 @@ footer {
 #safesteps-brand {
     color: var(--accent-color);
 }
+
+#survey-link{
+    color: var(--main-color);
+}
