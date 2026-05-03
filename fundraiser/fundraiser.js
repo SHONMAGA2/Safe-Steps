@@ -5,20 +5,26 @@ document.addEventListener("DOMContentLoaded", () => {
         {
             name: "Colour Run",
             description: "Participants run while being covered in coloured powder.",
-            cost: 1500,
-            revenue: 4000
+            cost: "NAN",
+            revenue: "NAN"
         },
         {
             name: "Dress-Up Day",
             description: "Students dress according to a theme for a small fee.",
-            cost: 200,
-            revenue: 1500
+            cost: "NAN",
+            revenue: "NAN"
         },
         {
             name: "Safety Quiz Competition",
             description: "Students participate in a road safety quiz competition.",
-            cost: 100,
-            revenue: 800
+            cost: "NAN",
+            revenue: "NAN"
+        },
+        {
+            name: "Winter in Paris",
+            description: "Dress in your paris style for winter",
+            cost: "10",
+            revenue: "NAN"
         }
     ];
 
