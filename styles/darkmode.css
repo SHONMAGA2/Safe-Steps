@@ -1,0 +1,139 @@
+/* ============================================================
+   Safe Steps – Dark Mode
+   Applied via body[data-theme="dark"]
+   ============================================================ */
+
+/* ---------- Smooth transitions ---------- */
+body {
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+section, article, header, main, footer {
+    transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* ---------- Toggle Button ---------- */
+#dark-mode-btn {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    z-index: 9999;
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    border: 2px solid #7A1F3D;
+    background: #ffffff;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.15rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.18);
+    transition: background 0.3s ease, border-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    outline: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+#dark-mode-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
+}
+
+#dark-mode-btn:active {
+    transform: scale(0.95);
+}
+
+/* Icon colours */
+#dark-mode-btn .dm-moon { display: inline; color: #1F4E79; }
+#dark-mode-btn .dm-sun  { display: none;   color: #F4C542; }
+
+/* ---------- Dark mode – button ---------- */
+body[data-theme="dark"] #dark-mode-btn {
+    background: #1E293B;
+    border-color: #F4C542;
+}
+
+body[data-theme="dark"] #dark-mode-btn .dm-moon { display: none; }
+body[data-theme="dark"] #dark-mode-btn .dm-sun  { display: inline; }
+
+/* ---------- Dark mode – global ---------- */
+body[data-theme="dark"] {
+    background-color: #0F172A;
+    color: #CBD5E1;
+}
+
+body[data-theme="dark"] p,
+body[data-theme="dark"] li,
+body[data-theme="dark"] span:not(#brand-name):not(#sec-brand-name):not(#branding):not(#branding2):not(#brand1):not(#brand2):not(#brand):not(#safesteps-brand) {
+    color: #CBD5E1;
+}
+
+body[data-theme="dark"] h2,
+body[data-theme="dark"] h3 {
+    color: #E2E8F0;
+}
+
+/* ---------- Header ---------- */
+body[data-theme="dark"] header {
+    background-color: #0F172A;
+    color: #E2E8F0;
+}
+
+/* Subheading text in header */
+body[data-theme="dark"] header > p {
+    color: #94A3B8;
+}
+
+/* ---------- Sections & Articles ---------- */
+body[data-theme="dark"] section,
+body[data-theme="dark"] article {
+    background-color: #1E293B;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.45);
+}
+
+/* ---------- Nav links ---------- */
+body[data-theme="dark"] header nav ul li a {
+    color: #93C5FD;
+}
+
+body[data-theme="dark"] header nav ul li a:hover {
+    color: #F4C542;
+}
+
+/* ---------- Images ---------- */
+body[data-theme="dark"] img {
+    opacity: 0.88;
+    filter: brightness(0.92);
+}
+
+/* ---------- Main content links ---------- */
+body[data-theme="dark"] main a {
+    color: #93C5FD;
+}
+
+body[data-theme="dark"] main a:hover {
+    color: #F4C542;
+}
+
+/* ---------- Footer stays as-is (gradient) ---------- */
+/* footer uses --main-gradient which still works in dark mode */
+
+body[data-theme="dark"] footer .credits p {
+    color: #F8FAFC;
+}
+
+/* ---------- Buttons on contact page ---------- */
+body[data-theme="dark"] #email   { opacity: 0.9; }
+body[data-theme="dark"] #whatsapp{ opacity: 0.9; }
+body[data-theme="dark"] #sms     { opacity: 0.9; }
+
+/* ---------- Mobile responsiveness for button ---------- */
+@media (max-width: 600px) {
+    #dark-mode-btn {
+        width: 40px;
+        height: 40px;
+        font-size: 1rem;
+        top: 0.6rem;
+        right: 0.6rem;
+    }
+}
