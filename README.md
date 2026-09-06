@@ -4,6 +4,8 @@ Safe Steps is a school-based road safety awareness campaign aimed at improving l
 
 The project combines data collection, analysis, and practical solutions to address unsafe road behaviour and environmental risks.
 
+Website URL: https://safestepsroadsafety.netlify.app/
+
 ## 🚀 Features
 
 - Survey data collection and analysis
