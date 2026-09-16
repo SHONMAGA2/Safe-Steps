@@ -1,0 +1,518 @@
+:root {
+    --main-color: #F4C542;
+    --secondary-color: #1F4E79;
+    --accent-color: #7A1F3D;
+
+    --light-background: #F8FAFC;
+    --text-color: #1E293B;
+    --white: #FFFFFF;
+    --muted-text: #64748B;
+
+    --main-gradient:
+        linear-gradient(
+            135deg,
+            var(--main-color),
+            var(--secondary-color),
+            var(--accent-color)
+        );
+
+    --shadow:
+        0 10px 30px rgba(15, 23, 42, 0.08);
+
+    --radius: 1.25rem;
+}
+
+
+/* ==================== GENERAL ==================== */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background: var(--light-background);
+    color: var(--text-color);
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+}
+
+h1,
+h2,
+h3 {
+    font-family: "Alice", Georgia, serif;
+}
+
+h2 {
+    margin-top: 0;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+
+/* ==================== HEADER ==================== */
+
+.site-header {
+    padding: 2rem 5%;
+    text-align: center;
+}
+
+.brand h1 {
+    margin-bottom: 0.5rem;
+}
+
+#brand-name {
+    font-size: clamp(3rem, 8vw, 5rem);
+    color: var(--main-color);
+}
+
+#sec-brand-name {
+    font-size: clamp(3rem, 8vw, 5rem);
+    color: var(--secondary-color);
+}
+
+.site-tagline {
+    max-width: 700px;
+    margin: 0 auto 1.5rem;
+    color: var(--muted-text);
+}
+
+
+/* ==================== NAVIGATION ==================== */
+
+#web-headers ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+#web-headers a {
+    display: inline-block;
+    padding: 0.65rem 1rem;
+    color: var(--accent-color);
+    text-decoration: none;
+    border-radius: 999px;
+    transition:
+        background 0.2s ease,
+        color 0.2s ease,
+        transform 0.2s ease;
+}
+
+#web-headers a:hover,
+#web-headers a[aria-current="page"] {
+    background: var(--accent-color);
+    color: var(--white);
+    transform: translateY(-2px);
+}
+
+
+/* ==================== SHARED SECTION ==================== */
+
+main {
+    width: min(1200px, 92%);
+    margin: 0 auto;
+}
+
+main > section {
+    margin: 1.5rem 0;
+    padding: clamp(1.5rem, 4vw, 3rem);
+    background: var(--white);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+}
+
+
+/* ==================== TYPOGRAPHY ==================== */
+
+.section-heading {
+    max-width: 750px;
+    margin: 0 auto 2rem;
+    text-align: center;
+}
+
+.eyebrow {
+    margin-bottom: 0.5rem;
+    color: var(--accent-color);
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+}
+
+
+/* ==================== TICKER ==================== */
+
+.celebratory-banner {
+    padding: 0;
+    overflow: hidden;
+    background: var(--accent-color);
+    color: var(--white);
+}
+
+.moving-text {
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.moving-text p {
+    width: max-content;
+    margin: 0;
+    padding: 0.85rem 0;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    animation: ticker 18s linear infinite;
+}
+
+@keyframes ticker {
+    from {
+        transform: translateX(100vw);
+    }
+
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+
+/* ==================== COUNTDOWN ==================== */
+
+.countdown-section {
+    text-align: center;
+}
+
+.countdown {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.countdown-box {
+    padding: 1.5rem 1rem;
+    border-radius: 1rem;
+    background: var(--secondary-color);
+    color: var(--white);
+}
+
+.countdown-box span {
+    display: block;
+    font-size: clamp(2rem, 6vw, 3.5rem);
+    font-weight: 700;
+    line-height: 1;
+}
+
+.countdown-box small {
+    display: block;
+    margin-top: 0.5rem;
+    opacity: 0.85;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+}
+
+
+/* ==================== HERO ==================== */
+
+.celebratory-hero {
+    text-align: center;
+}
+
+.celebratory-hero h2 {
+    max-width: 900px;
+    margin: 0 auto 1rem;
+    font-size: clamp(2rem, 5vw, 3.5rem);
+}
+
+.hero-description {
+    max-width: 750px;
+    margin: 0 auto;
+    color: var(--muted-text);
+}
+
+
+/* ==================== MAIN ACHIEVEMENT ==================== */
+
+.main-achievement {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 3rem;
+    align-items: center;
+}
+
+.achievement-text h2 {
+    color: var(--accent-color);
+    font-size: clamp(2rem, 4vw, 3rem);
+}
+
+.achievement-image img {
+    width: 100%;
+    max-height: 450px;
+    object-fit: cover;
+    border-radius: 1rem;
+    border-left: 5px solid var(--main-color);
+}
+
+
+/* ==================== AWARDS ==================== */
+
+.award-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+.award-card {
+    overflow: hidden;
+    background: var(--light-background);
+    border-radius: 1rem;
+    border: 1px solid rgba(15, 23, 42, 0.08);
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.award-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow);
+}
+
+.award-card img {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+}
+
+.award-content {
+    padding: 1.25rem;
+}
+
+.award-content h3 {
+    margin-top: 0;
+    color: var(--accent-color);
+}
+
+
+/* ==================== TIMELINE ==================== */
+
+.timeline {
+    max-width: 850px;
+    margin: 0 auto;
+}
+
+.timeline-item {
+    display: grid;
+    grid-template-columns: 70px 1fr;
+    gap: 1.5rem;
+    position: relative;
+    padding-bottom: 2rem;
+}
+
+.timeline-item:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    left: 34px;
+    top: 55px;
+    width: 2px;
+    height: calc(100% - 20px);
+    background: var(--main-color);
+}
+
+.timeline-marker {
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background: var(--accent-color);
+    color: var(--white);
+    font-weight: 700;
+}
+
+.timeline-item h3 {
+    margin: 0 0 0.5rem;
+    color: var(--secondary-color);
+}
+
+
+/* ==================== UPCOMING ==================== */
+
+.upcoming-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+.upcoming-card {
+    padding: 1.5rem;
+    border-radius: 1rem;
+    background: var(--light-background);
+    border-top: 4px solid var(--main-color);
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.upcoming-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow);
+}
+
+.upcoming-icon {
+    display: block;
+    margin-bottom: 1rem;
+    font-size: 2rem;
+}
+
+.upcoming-card h3 {
+    color: var(--accent-color);
+}
+
+
+/* ==================== CTA ==================== */
+
+.progress-cta {
+    text-align: center;
+    background: var(--main-gradient);
+    color: var(--white);
+}
+
+.progress-cta .eyebrow {
+    color: var(--white);
+}
+
+.progress-cta h2 {
+    font-size: clamp(2rem, 5vw, 3rem);
+}
+
+.progress-cta > p {
+    max-width: 650px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.cta-buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.cta-button {
+    padding: 0.8rem 1.5rem;
+    border-radius: 999px;
+    text-decoration: none;
+    font-weight: 700;
+    transition:
+        transform 0.2s ease,
+        opacity 0.2s ease;
+}
+
+.cta-button:hover {
+    transform: translateY(-2px);
+    opacity: 0.9;
+}
+
+.cta-button.primary {
+    background: var(--white);
+    color: var(--accent-color);
+}
+
+.cta-button.secondary {
+    border: 2px solid var(--white);
+    color: var(--white);
+}
+
+
+/* ==================== FOOTER ==================== */
+
+footer {
+    margin-top: 3rem;
+    padding: 2rem;
+    background: var(--secondary-color);
+    color: var(--white);
+    text-align: center;
+}
+
+.socials {
+    display: flex;
+    justify-content: center;
+    gap: 1.25rem;
+    margin-top: 1rem;
+}
+
+.socials a {
+    color: var(--white);
+    font-size: 1.6rem;
+    transition:
+        transform 0.2s ease,
+        color 0.2s ease;
+}
+
+.socials a:hover {
+    color: var(--main-color);
+    transform: scale(1.15);
+}
+
+
+/* ==================== MOBILE ==================== */
+
+@media (max-width: 850px) {
+
+    .main-achievement {
+        grid-template-columns: 1fr;
+    }
+
+    .award-grid,
+    .upcoming-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    main {
+        width: 94%;
+    }
+
+    .countdown {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    #web-headers ul {
+        flex-direction: column;
+    }
+
+    #web-headers a {
+        width: 100%;
+    }
+
+    .timeline-item {
+        grid-template-columns: 50px 1fr;
+        gap: 1rem;
+    }
+
+    .timeline-marker {
+        width: 50px;
+        height: 50px;
+    }
+
+    .timeline-item:not(:last-child)::after {
+        left: 24px;
+    }
+
+}
